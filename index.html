@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="assets/css/styles-game.css">
+    <link rel="stylesheet" href="assets/css/styles-modal.css">
+
+    <!-- CDN para Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+    crossorigin="anonymous"/>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" 
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,600&display=swap" 
+    rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <h1>ROCK PAPER SCISSOR GAME</h1>
+    </header>
+
+    <main class="main">
+        <form class="container-reset">
+            <button type="reset" id="reset" class="reset">Resetear</button>
+        </form>
+        <!-- Sección para el Score(Puntaje) del juego -->
+        <section class="score" id="score">
+            <div class="score__badge" id="badge-user">User</div>
+            <div class="score__badge" id="badge-comp">Comp</div>
+            <span class="score__user" id="score__user">0</span> : <span class="score__comp" id="score__comp">0</span>
+        </section>
+
+        <p>Elige tu opción</p>
+        <!-- Sección para el board (tablero) del juego -->
+        <section class="board">
+            <div class="board-choices">
+                <div class="choice" id="rock">
+                    <i class="fal fa-hand-rock fa-7x fa-inverse"></i>
+                </div>
+
+                <div class="choice" id="paper">
+                    <i class="fal fa-hand-paper fa-7x fa-inverse"></i>
+                </div>
+
+                <div class="choice" id="peace">
+                    <i class="fal fa-hand-peace fa-7x fa-inverse"></i>
+                </div>
+            </div>
+
+            <div class="container-modal" id="container-modal">
+                <div class="modal">
+                    <form>
+                        <button type="button" class="btn-regresar" id="btn-regresar">
+                            <a href="">X</a>
+                        </button>
+                    </form>
+                    <div class="modal__title">
+                        <h2><span>You</span> vs Comp</h2>
+                    </div>
+                    <div class="container-hand">
+                        <div class="hand-user">
+                            <i id="hand-user" class="fas fa-hand-rock fa-5x"></i>
+                        </div>
+                        <div class="hand-comp">
+                            <i id="hand-comp" class="fas fa-hand-rock fa-5x"></i>
+                        </div>
+                    </div>
+                    <div class="modal__text">
+                        <p id="text-winner">User Win :)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/element-dinamics.js"></script>
+</body>
+</html>
